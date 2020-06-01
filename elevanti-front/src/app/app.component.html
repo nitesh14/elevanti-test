@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+</div>
+<h2>Order list </h2>
+<div>
+  <table class="greenTable">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>User Id</th>
+        <th>Total Price</th>
+        <th>Confirmed</th>
+        <th>Discount</th>
+        <th>Total Price(USD)</th>
+        <th>Order No</th>
+        <th>Contact Email</th>
+        <th>App Id</th>
+        <th>Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders | async">
+        <td>{{order.email}}</td>
+        <td>{{order.user_id}}</td>
+        <td>{{order.total_price}}</td>
+        <td>{{order.confirmed}}</td>
+        <td>{{order.total_discounts}}</td>
+        <td>{{order.total_price_usd}}</td>
+        <td>{{order.order_number}}</td>
+        <td>{{order.contact_email}}</td>
+        <td>{{order.app_id}}</td>
+        <td>{{order.order_status_url}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
